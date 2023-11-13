@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - </title>
+    <!-- add icon link -->
+    <link rel="icon" href="img/frutas.png">
+    <!-- css link -->
+
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/product.css">
+</head>
+<body>
+  
+  <!-- <nav class="navbar"></nav> -->
+
+  <div class="header-section container">
+    <img class="logo" src="./img/frutas.png" alt="">
+    <div>
+      <img onmouseover="showCart(this)" class="cart" src="./img/cart.png" alt="">
+          <p class="class"></p>
+        <p class="count-product">0</p>
+    </div>
+    <div class="cart-products" id="products-id">
+        <p class="close-btn" onclick="closeBtn()">X</p>
+        <h3>Mi carrito</h3>
+        <div class="card-items">
+            
+        </div>
+        <h2>Total: $ <strong class="price-total">0</strong></h2>
+    </div>
+</div>
+</header>
+<section class="container">
+<div class="products">
+    <div class="carts">
+        <div>
+            <img src="./img/manzana.jpg" alt="">
+            <p>$<span>375</span></p>
+        </div>
+        <p class="title">Manzanas Ralls Genet</p>
+        <a href="" data-id="1" class="btn-add-cart">add to cart</a>
+    </div>
+    <div class="carts">
+        <div>
+            <img src="./img/naranja-alustiana.jpg" alt="">
+            <p>$<span>650</span></p>
+        </div>
+        <p class="title"> Naranja alustiana</p>
+        <a href="" class="btn-add-cart" data-id="2">add to cart</a>
+    </div>
+    <div class="carts">
+        <div>
+            <img src="./img/naranja-navel.jpg" alt="">
+            <p>$<span>500</span></p>
+        </div>
+        <p class="title"> Naranja navel</p>
+        <a href="" data-id="3" class="btn-add-cart">add to cart</a>
+    </div>
+    <div class="carts">
+        <div>
+            <img src="./img/bananas.jpg" alt="">
+            <p>$<span>430</span></p>
+        </div>
+        <p class="title"> Bananas</p>
+        <a href="" data-id="4" class="btn-add-cart">add to cart</a>
+    </div>
+    <div class="carts">
+        <div>
+            <img src="./img/pera.jpg" alt="">
+            <p>$<span>600</span></p>
+        </div>
+        <p class="title"> Peras Blanca de Aranjuez</p>
+        <a href="" data-id="5" class="btn-add-cart">add to cart</a>
+    </div>
+    <div class="carts">
+        <div>
+            <img src="./img/piña.png" alt="">
+            <p>$<span>430</span></p>
+        </div>
+        <p class="title"> Piña</p>
+        <a href="" data-id="6" class="btn-add-cart">add to cart</a>
+    </div>
+    <div class="carts">
+        <div>
+            <img src="./img/sandia.png" alt="">
+            <p>$<span>460</span></p>
+        </div>
+        <p class="title"> Sandia</p>
+        <a href="" data-id="7" class="btn-add-cart">add to cart</a>
+    </div>
+    <div class="carts">
+        <div>
+            <img src="./img/uva.png" alt="">
+            <p>$<span>420</span></p>
+        </div>
+        <p class="title"> uvas</p>
+        <a href="" data-id="8" class="btn-add-cart">add to cart</a>
+    </div>
+</div>
+</section>
+
+  
+
+    <!-- card container -->
+    <!-- <section class="product"> 
+        <h2 class="product-category">Productos en oferta</h2>
+        <button class="pre-btn"><img src="img/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="img/arrow.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+               <div class="product-image">
+                <span class="discount-tag">20% de descuento</span>
+                   <img src="img/manzana.jpg" class="product-thumb" alt="">
+                   <button class="card-btn">Agregar al carrito</button>
+        </div>
+        <div class="product-info">
+            <h2 class="product-brand">Manzanas Ralls Genet</h2>
+            <p class="product-short-des">¡de buena calidad!</p>
+            <span class="price">$375</span><span class="actual-price">$400</span>
+          </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+             <span class="discount-tag">20% de descuento</span>
+                <img src="img/pera.jpg" class="product-thumb" alt="">
+                <button class="card-btn">Agregar al carrito</button>
+     </div>
+     <div class="product-info">
+         <h2 class="product-brand">Peras Blanca de Aranjuez</h2>
+         <p class="product-short-des">¡de buena calidad!</p>
+         <span class="price">$600</span><span class="actual-price">$680</span>
+       </div>
+     </div>
+     <div class="product-card">
+        <div class="product-image">
+         <span class="discount-tag">20% de descuento</span>
+            <img src="img/naranja-alustiana.jpg" class="product-thumb" alt="">
+            <button class="card-btn">Agregar al carrito</button>
+ </div>
+ <div class="product-info">
+     <h2 class="product-brand">Naranja Alustiana</h2>
+     <p class="product-short-des">¡de buena calidad!</p>
+     <span class="price">$650</span><span class="actual-price">$690</span>
+   </div>
+ </div>
+ <div class="product-card">
+    <div class="product-image">
+     <span class="discount-tag">20% de descuento</span>
+        <img src="img/naranja-navel.jpg" class="product-thumb" alt="">
+        <button class="card-btn">Agregar al carrito</button>
+</div>
+<div class="product-info">
+ <h2 class="product-brand">Naranja Navel</h2>
+ <p class="product-short-des">¡de buena calidad!</p>
+ <span class="price">$500</span><span class="actual-price">$530</span>
+</div>
+</div>
+<div class="product-card">
+    <div class="product-image">
+     <span class="discount-tag">20% de descuento</span>
+        <img src="img/bananas.jpg" class="product-thumb" alt="">
+        <button class="card-btn">Agregar al carrito</button>
+</div>
+<div class="product-info">
+ <h2 class="product-brand">Bananas</h2>
+ <p class="product-short-des">¡de buena calidad!</p>
+ <span class="price">$430</span><span class="actual-price">$480</span>
+</div>
+</div>
+<div class="product-card">
+    <div class="product-image">
+     <span class="discount-tag">20% de descuento</span>
+        <img src="img/uva.png" class="product-thumb" alt="">
+        <button class="card-btn">Agregar al carrito</button>
+</div>
+<div class="product-info">
+ <h2 class="product-brand">Uvas</h2>
+ <p class="product-short-des">¡de buena calidad!</p>
+ <span class="price">$420</span><span class="actual-price">$480</span>
+</div>
+</div>
+<div class="product-card">
+    <div class="product-image">
+     <span class="discount-tag">20% de descuento</span>
+        <img src="img/piña.png" class="product-thumb" alt="">
+        <button class="card-btn">Agregar al carrito</button>
+</div>
+<div class="product-info">
+ <h2 class="product-brand">Piñas</h2>
+ <p class="product-short-des">¡de buena calidad!</p>
+ <span class="price">430</span><span class="actual-price">$490</span>
+</div>
+</div>
+<div class="product-card">
+    <div class="product-image">
+     <span class="discount-tag">20% de descuento</span>
+        <img src="img/sandia.png" class="product-thumb" alt="">
+        <button class="card-btn">Agregar al carrito</button>
+</div>
+<div class="product-info">
+ <h2 class="product-brand">Sandia</h2>
+ <p class="product-short-des">¡de buena calidad!</p>
+ <span class="price">$460</span><span class="actual-price">$510</span>
+</div>
+</div>
+    </section> -->
+
+    <footer></footer>
+    
+
+    <script>
+      function showCart(x){
+          document.getElementById("products-id").style.display = "block";
+      }
+      function closeBtn(){
+           document.getElementById("products-id").style.display = "none";
+      }
+
+  </script>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/product.js"></script>
+</body>
+</html>
